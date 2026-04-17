@@ -1,6 +1,6 @@
 cask "c11mux" do
-  version "0.62.7"
-  sha256 "75daa044bcedf684ace5a799fa0ffbba90333b40168aa952569944f8930a76ef"
+  version "0.1.0"
+  sha256 "8786ff8fbbe8101d555110090e3ca69b14214a21001050af978e6b09b5d0e0e9"
 
   url "https://github.com/Stage-11-Agentics/c11mux/releases/download/v#{version}/c11mux-macos.dmg"
   name "c11mux"
