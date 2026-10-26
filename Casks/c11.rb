@@ -1,6 +1,6 @@
 cask "c11" do
-  version "1.2.0"
-  sha256 "0c63ae1bee2165ebda2d15a1e47f02484104a89a9ce044ca6c1368fa29e9fb14"
+  version "1.3.0"
+  sha256 "d78f2f56a4fa49d50bab003c2f39729ace2e92a45f13692c425dab57e12bb776"
 
   url "https://github.com/Stage-11-Agentics/c11/releases/download/v#{version}/c11-macos.dmg"
   name "c11"
