@@ -2,8 +2,8 @@ cask "c11" do
   # Apple silicon gets each release; Intel Macs stay on 1.7.0, the
   # last universal build (C11-541).
   on_arm do
-    version "1.7.5"
-    sha256 "dbba2a2b7fc4e8d22a59ab3c177a1e77d4bd551cf081f5b8a8893e475cfd9787"
+    version "1.7.6"
+    sha256 "18f656e8e074c43fd486e7178c82a810b3638f561144180a5a6a0c5322ea18e1"
   end
   on_intel do
     version "1.7.0"
