@@ -1,6 +1,20 @@
 cask "c11" do
-  version "1.7.0"
-  sha256 "53f8ceda80bd61c071e0563315f9626bda26587aaa671dc683e81660ce9c26a6"
+  # Apple silicon gets each release; Intel Macs stay on 1.7.0, the
+  # last universal build (C11-541).
+  on_arm do
+    version "1.7.5"
+    sha256 "dbba2a2b7fc4e8d22a59ab3c177a1e77d4bd551cf081f5b8a8893e475cfd9787"
+  end
+  on_intel do
+    version "1.7.0"
+    sha256 "53f8ceda80bd61c071e0563315f9626bda26587aaa671dc683e81660ce9c26a6"
+
+    caveats <<~EOS
+      c11 1.7.0 is the last release for Intel Macs. To run a newer
+      c11 on this Mac, build it from source:
+        https://github.com/Stage-11-Agentics/c11
+    EOS
+  end
 
   url "https://github.com/Stage-11-Agentics/c11/releases/download/v#{version}/c11-macos.dmg"
   name "c11"
@@ -12,7 +26,7 @@ cask "c11" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   conflicts_with cask: "cmux"
 
